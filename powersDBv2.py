@@ -8,26 +8,41 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.lib import colors
 import sys
 import os
-import re  # Imported for filename sanitization
+import re  # For filename sanitization
 import json  # For saving/loading data
 
 def resource_path(relative_path):
-    """ Get the absolute path to the resource, works for dev and for PyInstaller bundle """
+    """
+    Get the absolute path to the resource, works for development and when bundled with PyInstaller.
+
+    Args:
+        relative_path (str): The relative path to the resource.
+
+    Returns:
+        str: The absolute path to the resource.
+    """
     try:
-        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        # When using PyInstaller, sys._MEIPASS is the temporary folder created
         base_path = sys._MEIPASS
     except AttributeError:
+        # For development, use the current directory
         base_path = os.path.abspath(".")
 
     return os.path.join(base_path, relative_path)
 
 class PowerSelectionApp:
     def __init__(self, root):
+        """
+        Initialize the Power Selection App.
+
+        Args:
+            root (tk.Tk): The root Tkinter window.
+        """
         self.root = root
         self.root.title("Power Selection App")
-        self.root.geometry("1000x600")  # Adjusted window size
+        self.root.geometry("1000x600")  # Set window size
 
-        # Load powers from the bundled XML file
+        # Load powers from the XML file
         self.powers = self.load_powers(resource_path("powers.xml"))
 
         # Collect and sort power sets
@@ -36,14 +51,28 @@ class PowerSelectionApp:
             power_set_str = power.get('PowerSet', '')
             power_set_list.extend(power_set_str.split(', '))
 
+        # Remove duplicates and sort
         self.power_sets = sorted(set(filter(None, power_set_list)))
 
-        # Initialize selected powers list
+        # Initialize the list of selected powers
         self.selected_powers = []
 
+        # Create the GUI widgets
         self.create_widgets()
 
     def load_powers(self, filename):
+        """
+        Load powers from an XML file.
+
+        Args:
+            filename (str): The path to the XML file.
+
+        Returns:
+            dict: A dictionary of powers.
+
+        Raises:
+            Various exceptions if the file cannot be read or parsed.
+        """
         powers = {}
         try:
             tree = ET.parse(filename)
@@ -63,6 +92,9 @@ class PowerSelectionApp:
         return powers
 
     def create_widgets(self):
+        """
+        Create all the GUI widgets for the application.
+        """
         # Hero Name entry at the top
         hero_frame = ttk.Frame(self.root, padding="10")
         hero_frame.pack(side=tk.TOP, fill=tk.X)
@@ -145,18 +177,37 @@ class PowerSelectionApp:
         self.export_button.pack()
 
     def on_power_set_select(self, event):
+        """
+        Event handler for selecting a power set.
+
+        Args:
+            event: The Tkinter event object.
+        """
         selection = event.widget.curselection()
         if selection:
             power_set = event.widget.get(selection[0])
             self.update_power_list(power_set=power_set)
-        # Removed the else clause to prevent resetting the powers list
+        # Note: Removed the else clause to prevent resetting the powers list
 
     def on_search(self, event):
+        """
+        Event handler for searching powers by name.
+
+        Args:
+            event: The Tkinter event object.
+        """
         search_term = self.search_entry.get().lower()
         matching_powers = [name for name in self.powers.keys() if search_term in name.lower()]
         self.update_power_list(matching_powers=matching_powers)
 
     def update_power_list(self, power_set=None, matching_powers=None):
+        """
+        Update the power list based on the selected power set or search term.
+
+        Args:
+            power_set (str, optional): The selected power set.
+            matching_powers (list, optional): List of powers matching the search term.
+        """
         self.power_listbox.delete(0, tk.END)
         if power_set:
             # Collect power names that match the selected power set
@@ -181,12 +232,24 @@ class PowerSelectionApp:
                 self.power_listbox.insert(tk.END, name)
 
     def on_power_select(self, event):
+        """
+        Event handler for selecting a power to view its details.
+
+        Args:
+            event: The Tkinter event object.
+        """
         selection = event.widget.curselection()
         if selection:
             power_name = event.widget.get(selection[0])
             self.display_power_details(power_name)
 
     def display_power_details(self, power_name):
+        """
+        Display the details of the selected power.
+
+        Args:
+            power_name (str): The name of the power.
+        """
         power = self.powers.get(power_name, {})
         details = f"Name: {power.get('Name', 'N/A')}\n\n"
         details += f"Description: {power.get('Description', 'N/A')}\n\n"
@@ -197,12 +260,16 @@ class PowerSelectionApp:
         details += f"Cost: {power.get('Cost', 'N/A')}\n\n"
         details += f"Effect: {power.get('Effect', 'N/A')}"
 
+        # Update the details text widget
         self.details_text.config(state=tk.NORMAL)
         self.details_text.delete(1.0, tk.END)
         self.details_text.insert(tk.END, details)
         self.details_text.config(state=tk.DISABLED)
 
     def add_power(self):
+        """
+        Add the selected power to the hero's list of selected powers.
+        """
         selection = self.power_listbox.curselection()
         if selection:
             power_name = self.power_listbox.get(selection[0])
@@ -213,21 +280,37 @@ class PowerSelectionApp:
                 messagebox.showinfo("Information", f"'{power_name}' is already in your list.")
 
     def remove_power(self):
+        """
+        Remove the selected power from the hero's list of selected powers.
+        """
         selection = self.selected_listbox.curselection()
         if selection:
             power_name = self.selected_listbox.get(selection[0])
             self.selected_powers.remove(power_name)
             self.selected_listbox.delete(selection[0])
 
-    # Method to handle double-click on power_listbox
     def on_power_double_click(self, event):
+        """
+        Handle double-click event on the power listbox to add a power.
+
+        Args:
+            event: The Tkinter event object.
+        """
         self.add_power()
 
-    # Method to handle double-click on selected_listbox
     def on_selected_power_double_click(self, event):
+        """
+        Handle double-click event on the selected powers listbox to remove a power.
+
+        Args:
+            event: The Tkinter event object.
+        """
         self.remove_power()
 
     def export_to_pdf(self):
+        """
+        Export the selected powers to a PDF file.
+        """
         if not self.selected_powers:
             messagebox.showinfo("Information", "Your selected powers list is empty.")
             return
@@ -312,7 +395,7 @@ class PowerSelectionApp:
                             textobject.setTextOrigin(50, height - 50)
                             textobject.setFont(font_name, font_size)
                             textobject.setLeading(font_size)
-                            textobject.setFillColor(colors.black)  # Ensure color is reset after page change
+                            textobject.setFillColor(colors.black)  # Reset color after page change
 
                 textobject.textLine("")  # Add an empty line between powers
 
@@ -323,6 +406,18 @@ class PowerSelectionApp:
             messagebox.showerror("Error", f"An error occurred while generating the PDF:\n{e}")
 
     def wrap_text(self, text, font_name, font_size, max_width):
+        """
+        Wrap text to fit within a specified width.
+
+        Args:
+            text (str): The text to wrap.
+            font_name (str): The font name.
+            font_size (int): The font size.
+            max_width (int): The maximum width in points.
+
+        Returns:
+            list: A list of wrapped text lines.
+        """
         lines = []
         words = text.split()
         current_line = ''
@@ -341,8 +436,10 @@ class PowerSelectionApp:
             lines.append(current_line)
         return lines
 
-    # New method to reset the application
     def reset_app(self):
+        """
+        Reset the application to its initial state.
+        """
         # Clear hero name entry
         self.hero_name_entry.delete(0, tk.END)
         # Clear selected powers list
@@ -360,8 +457,10 @@ class PowerSelectionApp:
         self.details_text.config(state=tk.DISABLED)
         # Optionally, reset any other state variables or GUI elements as needed
 
-    # Existing methods for saving and loading data
     def save_to_file(self):
+        """
+        Save the hero's name and selected powers to a JSON file.
+        """
         # Get the hero's name
         hero_name = self.hero_name_entry.get().strip()
 
@@ -398,6 +497,9 @@ class PowerSelectionApp:
             messagebox.showerror("Error", f"An error occurred while saving the file:\n{e}")
 
     def load_from_file(self):
+        """
+        Load the hero's name and selected powers from a JSON file.
+        """
         file_path = filedialog.askopenfilename(
             defaultextension=".json",
             filetypes=[("JSON files", "*.json")],
@@ -428,6 +530,7 @@ class PowerSelectionApp:
             messagebox.showerror("Error", f"An error occurred while loading the file:\n{e}")
 
 if __name__ == "__main__":
+    # Create the main application window
     root = tk.Tk()  # Ensure this is the first Tkinter command
     app = PowerSelectionApp(root)
     root.mainloop()

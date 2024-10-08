@@ -2,7 +2,7 @@
     <Power>
         <Name>Accuracy 1</Name>
         <Description>The character is an ace with ranged attacks.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +1 to their Agility damage multiplier, and they gain a +1 bonus to Agility checks other than attacks.</Effect>
@@ -10,7 +10,7 @@
     <Power>
         <Name>Accuracy 2</Name>
         <Description>The character is a sharpshooter.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Accuracy 1, Rank 2</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +2 to their Agility damage multiplier, and they gain a +2 bonus to Agility checks other than attacks.</Effect>
@@ -18,7 +18,7 @@
     <Power>
         <Name>Accuracy 3</Name>
         <Description>The character could hit a fly at one hundred paces.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Accuracy 2, Rank 3</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +3 to their Agility damage multiplier, and they gain a +3 bonus to Agility checks other than attacks.</Effect>
@@ -26,7 +26,7 @@
     <Power>
         <Name>Accuracy 4</Name>
         <Description>The character can out-target almost anyone.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Accuracy 3, Rank 4</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +4 to their Agility damage multiplier, and they gain a +4 bonus to Agility checks other than attacks.</Effect>
@@ -34,7 +34,7 @@
     <Power>
         <Name>Additional Limbs</Name>
         <Description>The character has extra limbs that can grab objects and attack foes.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character has an additional prehensile appendage (like a tail) or a symmetrical pair of them (like arms) that can be used to lift objects, use tools, or otherwise take actions that normally require the use of a hand. This grants them an edge in Melee and Agility checks. A character can have as many additional limbs as they like—within reason—but they get no additional advantages for them.</Effect>
@@ -61,7 +61,7 @@
     <Power>
         <Name>Anger</Name>
         <Description>You won't like them when they're angry.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Mighty 3, Rank 4</Prerequisites>
         <Action>Standard or Reaction</Action>
         <Trigger>The character is harmed by an attack.</Trigger>
@@ -274,7 +274,7 @@
     <Power>
         <Name>Brawling</Name>
         <Description>The character has the moves and is hard to hit.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character can use their Melee defense score against Agility attacks too.</Effect>
@@ -282,7 +282,7 @@
     <Power>
         <Name>Brilliance 1</Name>
         <Description>The character puts their brain to work.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +1 to their Logic damage multiplier, and they gain a +1 bonus to Logic checks other than attacks.</Effect>
@@ -290,7 +290,7 @@
     <Power>
         <Name>Brilliance 2</Name>
         <Description>Everything makes more sense to the character.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Brilliance 1, Rank 2</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +2 to their Logic damage multiplier, and they gain a +2 bonus to Logic checks other than attacks.</Effect>
@@ -298,7 +298,7 @@
     <Power>
         <Name>Brilliance 3</Name>
         <Description>Little can stop the character's mind.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Brilliance 2, Rank 3</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +3 to their Logic damage multiplier, and they gain a +3 bonus to Logic checks other than attacks.</Effect>
@@ -306,7 +306,7 @@
     <Power>
         <Name>Brilliance 4</Name>
         <Description>The character's intelligence is unparalleled.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Brilliance 3, Rank 4</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +4 to their Logic damage multiplier, and they gain a +4 bonus to Logic checks other than attacks.</Effect>
@@ -426,7 +426,7 @@
     <Power>
         <Name>Combat Trickery</Name>
         <Description>The character is a tricky one!</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Rank 2</Prerequisites>
         <Action>Reaction</Action>
         <Trigger>The character makes an attack.</Trigger>
@@ -670,7 +670,7 @@
     <Power>
         <Name>Discipline 1</Name>
         <Description>The character works to hone their power.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +1 to their Ego damage multiplier, and they gain a +1 bonus to Ego checks other than attacks.</Effect>
@@ -678,7 +678,7 @@
     <Power>
         <Name>Discipline 2</Name>
         <Description>The character is more in touch with their power than ever.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Discipline 1, Rank 2</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +2 to their Ego damage multiplier, and they gain a +2 bonus to Ego checks other than attacks.</Effect>
@@ -686,7 +686,7 @@
     <Power>
         <Name>Discipline 3</Name>
         <Description>Few can top the character's grasp on their power.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Discipline 2, Rank 3</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +3 to their Ego damage multiplier, and they gain a +3 bonus to Ego checks other than attacks.</Effect>
@@ -694,7 +694,7 @@
     <Power>
         <Name>Discipline 4</Name>
         <Description>The character has mastered their power.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Discipline 3, Rank 4</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character adds +4 to their Ego damage multiplier, and they gain a +4 bonus to Ego checks other than attacks.</Effect>
@@ -702,7 +702,7 @@
     <Power>
         <Name>Disguise</Name>
         <Description>The character appears to be someone else.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Action>Standard</Action>
         <Duration>Permanent</Duration>
@@ -968,7 +968,7 @@
     <Power>
         <Name>Energy Absorption</Name>
         <Description>The character turns damage into power.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Rank 4</Prerequisites>
         <Action>Reaction</Action>
         <Trigger>The character takes Health damage.</Trigger>
@@ -979,7 +979,7 @@
     <Power>
         <Name>Environmental Protection</Name>
         <Description>Environmental effects don't bother the character.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character is not harmed by intense cold or heat, the pressure of the deep seas, or the intense radiation and vacuum of space. The player can choose any or all of these protections, as best fits with the character concept.</Effect>
@@ -996,7 +996,7 @@
     <Power>
         <Name>Evasion</Name>
         <Description>The character can dodge fists quickly.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character can use their Agility defense score against Melee attacks too.</Effect>
@@ -1122,7 +1122,7 @@
     <Power>
         <Name>Flight 1</Name>
         <Description>The character can soar into the sky.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Rank 2</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character can fly. Their combat Flight Speed is equal to their rank times their Run Speed. Outside of combat, they can move three times their Flight Speed.</Effect>
@@ -1130,7 +1130,7 @@
     <Power>
         <Name>Flight 2</Name>
         <Description>The character can zoom across the sky.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Flight 1, Rank 3</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>Outside of combat, the character can fly up to 50 times their Flight Speed.</Effect>
@@ -1248,7 +1248,7 @@
     <Power>
         <Name>Group Flight</Name>
         <Description>The character can carry others with them into the sky.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Flight 1, Rank 2</Prerequisites>
         <Action>Standard</Action>
         <Duration>Concentration</Duration>
@@ -1339,7 +1339,7 @@
     <Power>
         <Name>Healing Factor</Name>
         <Description>The character heals amazingly fast.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>At the end of the character's turn, they regain Health equal to their Resilience. (This works outside of combat too, quickly bringing them back to full Health.)</Effect>
@@ -1347,7 +1347,7 @@
     <Power>
         <Name>Heightened Senses 1</Name>
         <Description>The character has superior senses.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character can sense things roughly twice as far away as normal. They also have an edge on Vigilance checks to perceive things, and enemies have trouble on checks they make to sneak past the character.</Effect>
@@ -1355,7 +1355,7 @@
     <Power>
         <Name>Heightened Senses 2</Name>
         <Description>The character has senses as sharp as radar.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Heightened Senses 1</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character can sense things roughly four times as far away as normal. Their senses are so sharp that they can use some of them to compensate for the loss of others (say, if blinded or deafened). They can even listen to the heartbeat of a person in the same room to see if they are lying—although this is as reliable as a traditional lie detector: far from 100% and not admissible in court. They also have a double edge on Vigilance checks to perceive things, and enemies have double trouble on checks they make to sneak past the character.</Effect>
@@ -1438,7 +1438,7 @@
     <Power>
         <Name>Iconic Weapon</Name>
         <Description>The character is known for owning and using a unique and powerful weapon.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character is known for owning and using a unique and powerful weapon, like Mjolnir (Thor's hammer) or Captain America's shield. The Narrator must approve the details of this weapon. This power can be taken more than once, but each time must be with a different weapon.</Effect>
@@ -1496,7 +1496,7 @@
     <Power>
         <Name>Inspiration</Name>
         <Description>The character's words inspire their allies.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Action>Standard</Action>
         <Duration>1 round</Duration>
@@ -1516,7 +1516,7 @@
     <Power>
         <Name>Integrity</Name>
         <Description>The character can think their way through.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character can use their Logic defense score against Ego attacks too.</Effect>
@@ -1694,7 +1694,7 @@
     <Power>
         <Name>Mighty 1</Name>
         <Description>The character is superhumanly strong.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>Treat the character as one size bigger for lifting, carrying, swinging, and throwing things. They also add +1 to their Melee damage multiplier, and they gain a +1 bonus to Melee checks other than attacks.</Effect>
@@ -1702,7 +1702,7 @@
     <Power>
         <Name>Mighty 2</Name>
         <Description>The character could lift a bus.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Mighty 1, Rank 2</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>Treat the character as two sizes bigger for lifting, carrying, swinging, and throwing things. They also add +2 to their Melee damage multiplier, and they gain a +2 bonus to Melee checks other than attacks.</Effect>
@@ -1710,7 +1710,7 @@
     <Power>
         <Name>Mighty 3</Name>
         <Description>The character could lift a house.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Mighty 2, Rank 3</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>Treat the character as three sizes bigger for lifting, carrying, swinging, and throwing things. They also add +3 to their Melee damage multiplier, and they gain a +3 bonus to Melee checks other than attacks.</Effect>
@@ -1718,7 +1718,7 @@
     <Power>
         <Name>Mighty 4</Name>
         <Description>The character is among the strongest there are.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Mighty 3, Rank 4</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>Treat the character as four sizes bigger for lifting, carrying, swinging, and throwing things. They also add +4 to their Melee damage multiplier, and they gain a +4 bonus to Melee checks other than attacks.</Effect>
@@ -2040,7 +2040,7 @@
     <Power>
         <Name>Reinforced Skeleton</Name>
         <Description>The character's bones have been reinforced or replaced with a super-strong alloy or metal.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character gains Health Damage Reduction 1.</Effect>
@@ -2167,7 +2167,7 @@
     <Power>
         <Name>Shape-Shift</Name>
         <Description>The character can change forms.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Disguise, Rank 3</Prerequisites>
         <Action>Standard or Reaction</Action>
         <Trigger>The character is attacked or otherwise in danger.</Trigger>
@@ -2349,7 +2349,7 @@
     <Power>
         <Name>Slow-Motion Dodge</Name>
         <Description>Time seems to slow down for the character, making it easy to dodge enemy attacks.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Action>Reaction</Action>
         <Trigger>An enemy makes an attack against the character's Agility defense.</Trigger>
@@ -2521,7 +2521,7 @@
     <Power>
         <Name>Sturdy 1</Name>
         <Description>The character has protection from physical damage.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character's body is so sturdy that they have Health Damage Reduction 1. If this power stems from armor or anything else removable—like Iron Man's armor—the character should apply the Tech Reliance trait to it.</Effect>
@@ -2529,7 +2529,7 @@
     <Power>
         <Name>Sturdy 2</Name>
         <Description>The character is protected as if by steel.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Sturdy 1, Rank 2</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character gains Health Damage Reduction 2.</Effect>
@@ -2537,7 +2537,7 @@
     <Power>
         <Name>Sturdy 3</Name>
         <Description>The character is protected like a tank.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Sturdy 2, Rank 4</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character gains Health Damage Reduction 3.</Effect>
@@ -2545,7 +2545,7 @@
     <Power>
         <Name>Sturdy 4</Name>
         <Description>The character is protected like a battleship.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Sturdy 3, Rank 6</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character gains Health Damage Reduction 4.</Effect>
@@ -2917,7 +2917,7 @@
     <Power>
         <Name>Uncanny 1</Name>
         <Description>The character has protection against mental assaults.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>Any damage multiplier for attacks against the character's Focus is reduced by 1. If this power is part of a battle suit, the power is integrated into a removable helmet. Otherwise, it's a part of the character. If this power stems from armor or anything else removable—like Magneto's helmet—the character should apply the Tech Reliance trait to it.</Effect>
@@ -2925,7 +2925,7 @@
     <Power>
         <Name>Uncanny 2</Name>
         <Description>The character's mind is protected as if by steel.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Uncanny 1, Rank 2</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>Any damage multiplier for attacks against the character's Focus is reduced by 2.</Effect>
@@ -2933,7 +2933,7 @@
     <Power>
         <Name>Uncanny 3</Name>
         <Description>The character's mind is protected like a tank.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Uncanny 2, Rank 4</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>Any damage multiplier for attacks against the character's Focus is reduced by 3.</Effect>
@@ -2941,7 +2941,7 @@
     <Power>
         <Name>Uncanny 4</Name>
         <Description>The character's mind is protected like a battleship.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>Uncanny 3, Rank 6</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>Any damage multiplier for attacks against the character's Focus is reduced by 4.</Effect>
@@ -3117,7 +3117,7 @@
     <Power>
         <Name>Wisdom</Name>
         <Description>The character not only has brains but knows when to use them.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Duration>Permanent</Duration>
         <Effect>The character can use their Ego defense score against Logic attacks too.</Effect>
@@ -3125,7 +3125,7 @@
     <Power>
         <Name>Wisecracker</Name>
         <Description>The character irritates a foe with their sharp wit.</Description>
-        <PowerSet>None</PowerSet>
+        <PowerSet>Basic</PowerSet>
         <Prerequisites>None</Prerequisites>
         <Action>Reaction</Action>
         <Trigger>The character succeeds in an attack on an enemy in earshot, or an enemy in earshot fails an attack on them.</Trigger>
