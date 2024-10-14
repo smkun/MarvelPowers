@@ -105,6 +105,10 @@ To build the standalone application:
    ```bash
    pyinstaller MMRPG-PowersAndTraits.spec
    ```
+   or
+    ```bash
+   python -m PyInstaller MMRPG-PowersAndTraits.spec
+    ```
 
 3. The built application will be in the `dist` folder.
 
