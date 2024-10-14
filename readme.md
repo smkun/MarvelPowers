@@ -1,5 +1,7 @@
 # MMRPG-PowersAndTraits App
 
+![MMRPG-PowersAndTraits App Logo](MMRPG.png "MMRPG-PowersAndTraits App Logo")
+
 ## Overview
 
 The MMRPG-PowersAndTraits App is a comprehensive tool designed for players of the Marvel Multiverse Role-Playing Game (MMRPG). It allows you to browse, select, and manage both powers and traits for your heroes. With features like power set filtering, search functionality, and detailed descriptions for both powers and traits, creating and customizing your hero has never been easier.
