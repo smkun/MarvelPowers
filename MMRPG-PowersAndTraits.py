@@ -461,7 +461,7 @@ class PowerAndTraitSelectionApp:
                 textobject.textLine("")
                 textobject.setFont(font_name, font_size)  # Reset font
 
-                for power_name in self.selected_powers:
+                for power_name in sorted(self.selected_powers):
                     power_data = self.powers.get(power_name, {})
                     # Collect all required fields
                     fields = {
@@ -522,7 +522,7 @@ class PowerAndTraitSelectionApp:
                 textobject.textLine("")
                 textobject.setFont(font_name, font_size)  # Reset font
 
-                for trait_name in self.selected_traits:
+                for trait_name in sorted(self.selected_traits):
                     trait_data = self.traits.get(trait_name, {})
                     # Collect required fields
                     fields = {
