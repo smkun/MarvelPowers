@@ -472,6 +472,7 @@ class PowerAndTraitSelectionApp:
                         'Action': power_data.get('Action', 'N/A'),
                         'Trigger': power_data.get('Trigger', 'N/A'),
                         'Duration': power_data.get('Duration', 'N/A'),
+                        'Range': power_data.get('Range', 'N/A'),
                         'Cost': power_data.get('Cost', 'N/A'),
                         'Effect': power_data.get('Effect', 'N/A')
                     }
@@ -481,7 +482,7 @@ class PowerAndTraitSelectionApp:
                     power_name_wrapped = self.wrap_text(fields['Name'], 'Helvetica-Bold', font_size, max_line_width)
                     text_lines.append(power_name_wrapped)
                     # Other fields
-                    for key in ['Description', 'PowerSet', 'Prerequisites', 'Action', 'Trigger', 'Duration', 'Cost', 'Effect']:
+                    for key in ['Description', 'PowerSet', 'Prerequisites', 'Action', 'Trigger', 'Duration', 'Range', 'Cost', 'Effect']:
                         value = fields.get(key)
                         if value and value not in ['N/A', 'None', 'No description provided.']:
                             field_text = f"{key}: {value}"
